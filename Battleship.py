@@ -2,6 +2,7 @@
 # There will be a single ship hidden in a random location on a 5x5 grid. 
 # The player will have 4 guesses to try to sink the ship.
 
+# Set up the 5x5 board and the actual location of the ship
 from random import randint
 
 board = []
@@ -25,14 +26,8 @@ def random_col(board):
 ship_row = random_row(board)
 ship_col = random_col(board)
 
-
-# Everything from here on should go in your for loop!
-# Be sure to indent four spaces!
-
-
-    
-    # Print (turn + 1) here!
-    
+# Have the player guess the ship's location then check if the player guessed right
+# The player has 4 chances to sink the ship
 for turn in range(4):
     print "Turn", turn+1
     guess_row = int(raw_input("Guess Row:"))
