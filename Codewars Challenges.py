@@ -18,6 +18,7 @@ def openOrSenior(data):
 def openOrSenior(data):
     return ["Senior" if m[0]>54 and m[1]>7 else "Open" for m in data]
 
+###
 # Challenge 2. You are a square!
 # Given an integral number, determine if it's a square number.
 
@@ -32,4 +33,12 @@ def is_square(n):
 def is_square(n):
     return n > 0 and (n**0.5).is_integer()
 
+###
+# Challenge 3. Triangular Treasure
+# Return the nth triangular number.
+def triangular(n):
+    if n <1:
+        return 0
+    else:
+        return n*(n+1)/2
 
