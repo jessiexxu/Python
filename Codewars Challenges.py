@@ -92,3 +92,10 @@ import string
 
 def alphabet_position(text):
     return " ".join([str(string.lowercase.index(letter.lower())+1) for letter in text if letter.isalpha()])
+
+###
+# Challenge 7. Array.diff
+# Remove all values from list a, which are present in list b.
+
+def array_diff(a, b):
+    return [x for x in a if x not in b]
