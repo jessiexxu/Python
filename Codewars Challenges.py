@@ -99,3 +99,11 @@ def alphabet_position(text):
 
 def array_diff(a, b):
     return [x for x in a if x not in b]
+
+###
+# Challenge 8. FInd the odd int
+# Given an array, find the int that appears an odd number of times.
+# There will always be only one integer that appears an odd number of times.
+
+def find_it(seq):
+    return [x for x in seq if seq.count(x)%2][0]
