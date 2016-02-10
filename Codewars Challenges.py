@@ -72,3 +72,23 @@ def goodVsEvil(good, evil):
 
 def narcissistic(value):
     return sum(int(i)**len(str(value)) for i in str(value)) == value
+
+###
+# Challenge 6. Replace with alphabet position
+# Input a text and return alphabet position for letters in the text
+
+import string
+
+def alphabet_position(text):
+    out = []
+    for i in text:
+        if i.isalpha():
+            out.append(string.lowercase.index(i.lower())+1)
+    return ' '.join(map(str,out))
+
+# OR
+
+import string
+
+def alphabet_position(text):
+    return " ".join([str(string.lowercase.index(letter.lower())+1) for letter in text if letter.isalpha()])
