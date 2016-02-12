@@ -107,3 +107,33 @@ def array_diff(a, b):
 
 def find_it(seq):
     return [x for x in seq if seq.count(x)%2][0]
+
+###
+# Challenge 9. Which are in
+# Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order 
+# and without duplicates of the strings of a1 which are substrings of strings of a2.
+
+def in_array(array1, array2):
+    out = []
+    for i in range(len(array1)):
+        for j in range(len(array2)):
+            if array1[i] in array2[j]:
+                out.append(array1[i])
+    return list(sorted(set(out)))
+
+# OR
+
+def in_array(array1, array2):
+    return sorted(list(set([s1 for s1 in array1 for s2 in array2 if s1 in s2])))
+
+###
+# Challenge 10. Find the divisors
+# Create a function named divisors that takes an integer and returns an array with all of the 
+# integer's divisors(except for 1 and the number itself). If the number is prime return the string '(integer) is prime'.
+
+def divisors(integer):
+    out = ([i for i in range(2, integer) if integer%i == 0])
+    if out == []:
+        return "%i is prime" %integer
+    else:
+        return out
