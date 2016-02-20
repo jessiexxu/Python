@@ -26,7 +26,7 @@ def NBAccuracy(features_train, labels_train, features_test, labels_test):
 def studentRegression(ages_train, net_worths_train):
     from sklearn.linear_model import LinearRegression
     reg = LinearRegression()
-    reg.fit(ages_train, net_worths_train_
+    reg.fit(ages_train, net_worths_train_)
     return reg
     
 print "net worth prediction:", reg.predict([27])
