@@ -38,3 +38,9 @@ print "r-squared score:", reg.score(ages_test, net_worths_test) ## r-squared on 
 
 print "\n stats on training dataset \n"
 print "r-squared score:", reg.score(ages_train, net_worths_train)
+
+plt.scatter(ages, net_worths)
+plt.plot(ages, reg.predict(ages), color='blue', linewidth=3)
+plt.xlabel("ages")
+plt.ylabel("net worths")
+plt.show()
