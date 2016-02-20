@@ -18,3 +18,23 @@ def NBAccuracy(features_train, labels_train, features_test, labels_test):
     from sklearn.metrics import accuracy_score
     accuracy = accuracy_score(labels_test, pred)
     return accuracy
+
+
+#################
+## 6. Regression
+#################
+def studentRegression(ages_train, net_worths_train):
+    from sklearn.linear_model import LinearRegression
+    reg = LinearRegression()
+    reg.fit(ages_train, net_worths_train_
+    return reg
+    
+print "net worth prediction:", reg.predict([27])
+print "slope:", reg.coef_
+print "intercept:", reg.intercept_
+
+print "\n stats on test dataset \n"
+print "r-squared score:", reg.score(ages_test, net_worths_test) ## r-squared on test data can assess overfitting
+
+print "\n stats on training dataset \n"
+print "r-squared score:", reg.score(ages_train, net_worths_train)
