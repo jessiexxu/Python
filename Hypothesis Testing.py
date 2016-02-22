@@ -19,11 +19,11 @@ print "margin of error is:", m
 print "CI is:", p-m, p+m
 
 # 4. Check whether observed fraction is within CI
-p_hat = round(15312.0/(15312+15348),4)
+p_hat = round(15348.0/(15348+15312),4)
 if p-m <= p_hat <= p+m:
-    print "Fell in the CI"
+    print "Fell in the CI. p hat is:", p_hat
 else:
-    print "Fell outside of the CI"
+    print "Fell outside of the CI. p hat is:", p_hat
 
 
 ### Analysis with a single metric
