@@ -26,13 +26,6 @@ else:
     print "Fell outside of the CI"
 
 
-
-
-
-
-
-
-
 ### Analysis with a single metric
 ### Metric: click-through-rate. d-min=0.01. alpha = 0.05. 
 ### Empirical SE = 0.0062 with 5000 pageviews in each group. Is the effect significant?
