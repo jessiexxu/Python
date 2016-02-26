@@ -22,6 +22,8 @@ def NBAccuracy(features_train, labels_train, features_test, labels_test):
 #################
 ## 2. Support Vector Machine (SVM)
 #################
+features_train, labels_train, features_test, labels_test = makeTerrainData()
+
 from sklearn.svm import SVC
 clf = SVC(kernel="linear")
 clf.fit(features_train,labels_train)
