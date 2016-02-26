@@ -17,7 +17,20 @@ def NBAccuracy(features_train, labels_train, features_test, labels_test):
     ### calculate and return the accuracy on the test data
     from sklearn.metrics import accuracy_score
     accuracy = accuracy_score(labels_test, pred)
-    return accuracy
+    print accuracy
+
+#################
+## 2. Support Vector Machine (SVM)
+#################
+from sklearn.svm import SVC
+clf = SVC(kernel="linear")
+clf.fit(features_train,labels_train)
+pred = clf.predict(features_test)
+
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(labels_test, pred)
+print accuracy
+
 
 
 #################
