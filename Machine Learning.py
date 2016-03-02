@@ -93,6 +93,43 @@ answer = [pred[i] for i in [10,26,50]]
 print answer
 
 
+###################
+## 3. Decision Tree
+###################
+
+## A classification model that predicts the value of a target variable by
+## learning simple decision rules inferred from the data features
+
+""" 
+    Use a Decision Tree to identify emails from the Enron corpus by author:    
+    Sara has label 0
+    Chris has label 1
+"""
+    
+import sys
+from time import time
+sys.path.append("../tools/")
+from email_preprocess import preprocess
+
+### features_train and features_test are the features for the training
+### and testing datasets, respectively
+### labels_train and labels_test are the corresponding item labels
+features_train, features_test, labels_train, labels_test = preprocess()
+
+from sklearn import tree
+clf = tree.DecisionTreeClassifier(min_samples_split=40)
+clf = clf.fit(features_train, labels_train)
+pred = clf.predict(features_test)
+
+from sklearn.metrics import accuracy_score
+acc = accuracy_score(pred, labels_test)
+print "The accuracy is:", acc
+print "The number of features in the training data is:", len(features_train[0])
+
+
+
+
+
 
 #################
 ## 6. Regression
