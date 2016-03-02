@@ -30,6 +30,7 @@ def NBAccuracy(features_train, labels_train, features_test, labels_test):
     accuracy = accuracy_score(labels_test, pred)
     print accuracy
 
+
 ##################################
 ## 2. Support Vector Machine (SVM)
 ##################################
